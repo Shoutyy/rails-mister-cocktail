@@ -1,0 +1,29 @@
+<div class="banner" style="background-image: url('https://images.unsplash.com/photo-1507286722556-2d4b0704eeb3?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=370e9f5deeab128d01264bf3c5a49f6c&auto=format&fit=crop&w=2776&q=80');">
+  <div class="banner-content">
+    <h1> Jeffrey </h1>
+    <p>Spend time with friend, not with bartender</p>
+    <a class="btn btn-primary btn-lg">Connect</a>
+  </div>
+</div>
+
+
+  <% @cocktails.each do |cocktail| %>
+  <div class="container">
+  <div class="row">
+
+
+  <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://images.unsplash.com/photo-1472245088132-ccd50746725c?ixlib=rb-0.3.5&s=a82d412efc50b6b217d561b72123be16&auto=format&fit=crop&w=1649&q=80');">
+  <div class="card-description">
+    <ul id="cocktails">
+      <h2><%= link_to cocktail.name, cocktail_path(cocktail.id) %></h2>
+    </div>
+    </div>
+    <% end %>
+    </ul>
+  </div>
+</div>
+
+<%= link_to new_cocktail_path do %>
+  <i class="fa fa-plus"></i> Add a new cocktail
+<% end %>
+
